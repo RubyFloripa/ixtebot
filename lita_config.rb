@@ -19,13 +19,13 @@ Lita.configure do |config|
   # appropriate gem to the Gemfile.
   config.robot.adapter = ENV['LITA_ADAPTER'].to_sym
 
+  Lita.load_locales "./locales/pt-MN.yml"
+
   # Define port for heroku
   config.http.port = ENV['PORT']
 
-  if (ENV['LITA_ADAPTER'].to_sym == :slack)
-    ## Slack adapter options:
-    config.adapters.slack.token = ENV['SLACK_TOKEN']
-  end
+  ## Slack adapter options:
+  config.adapters.slack.token = ENV['SLACK_TOKEN']
 
   ## Redis connection credentials:
   config.redis[:url] = ENV['REDISCLOUD_URL']

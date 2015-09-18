@@ -1,0 +1,6 @@
+pt-MN:
+  lita:
+    adapters:
+      shell:
+        startup_message: Aperta nos botão da maquineta "exit" ou "quit" seu Ixtepô.
+
